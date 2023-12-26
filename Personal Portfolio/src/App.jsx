@@ -5,7 +5,7 @@ function App() {
   return <>
 
   {/* top page */}
-  <div className="page">
+  <div id='homepage' className="page">
     <div className="nav">
       <i className="fa-solid fa-moon"></i>
     </div>
@@ -50,8 +50,8 @@ function App() {
   </div>
 
   {/* skills page */}
-  <div className="page">
-    <div id='removeMobile' className="head">Skills<span id="headdotlightblue">.</span></div>
+  <div id='skillspage' className="page">
+    <div className="head">Skills<span id="headdotlightblue">.</span></div>
 
     <div className="contentBox">
       <div id="skillscircle">
@@ -128,7 +128,25 @@ function App() {
 
 
 
+
+  {/* bottom navigator */}
+  <div className='removeDesktop' id="navigator">
+    <p href='#homepage' id='home' >Home</p>
+    <p href='#skillspage' id='skills' >Skills</p>
+    {/* <a href='#homepage' id='home' >Home</a>
+    <a href='#skillspage' id='skills' >Skills</a> */}
+    <p id='projects' >Project</p>
+    <p id='connect' >Connect</p>
+  </div>
+
   </>
 }
 
 export default App;
+
+
+/*
+  Additions -
+  1. Update written content about aryan's skills
+
+*/

@@ -13,6 +13,9 @@
 
 /* font-family: 'DM Serif Display', serif; */
 
+.removeDesktop{
+  display: none;
+}
 body{
   margin: 0;
   padding: 0;
@@ -116,7 +119,7 @@ h1{
   color: white;
 }
 .contentBox{
-  width: 42vw;
+  width: 45vw;
   height: fit-content;
   border-radius: 21px;
   background: rgba(255, 255, 255, 0.01);
@@ -160,7 +163,7 @@ h1{
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  gap: 1rem;
+  gap: 1.5rem;
   padding: 1.5rem 0;
 }
 .skillcircle img{
@@ -209,14 +212,6 @@ h1{
   border-top: 15px solid rgba(0,0,0,90%);
   filter: drop-shadow(0px 10px 10px rgba(255, 255, 255, 0.05));
   visibility: hidden;
-}
-#skillscircle{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 1rem;
-  padding: 1.5rem 0;
 }
 .skillcircle img{
   height: 40px;
@@ -295,6 +290,7 @@ h1{
   #profileContainer img{
     height: 150px;
     width: 150px;
+    margin-bottom: 0.75rem;
   }
   #imaryan{
     font-size: 36px;
@@ -308,7 +304,7 @@ h1{
   .contentBox{
     width: 90%;
     border-radius: 21px;
-    margin: 45px auto;
+    margin: 5px auto 60px;
   }
   .content{
     padding: 1.1rem 1rem;
@@ -317,8 +313,53 @@ h1{
     line-height: 125%;
     -webkit-text-stroke: .005rem #b7b7b7;
   }
-    
+  .head{
+    font-size: 55px;
+  }
+  
+
+
+  /* bottom navigator */
+  #navigator{
+    width: 90vw;
+    margin: auto;
+    height: 55px;
+    background-color: rgba(255,255,255,7%);
+    position: sticky;
+    bottom: 20px;
+    outline: 0.001rem solid rgba(255,255,255,75%);
+    border-radius: 30px;
+    backdrop-filter: blur(3.5px);
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    letter-spacing: .5px;
+    font-weight: 100;
+    color: white;
+    font-size: 12px;
+  }
+  #projects{
+    padding: 0.35rem 0.7rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 16px;
+    background: #222;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.5) inset;
+  }
+  p{
+    font-size: 12px;
+    height: fit-content;
+  }
+
 }
+
+
+
+
+
+
+
 
 
 /* Medium smartphones (iPhone 5, Galaxy S3, etc.) */
