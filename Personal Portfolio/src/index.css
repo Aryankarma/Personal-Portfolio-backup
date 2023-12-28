@@ -14,15 +14,15 @@
 
 /* custom scroll bar */
 body::-webkit-scrollbar {
-    width: 6px;        
-  }
-  
-  body::-webkit-scrollbar-track {
-    background: #181818;      
-  }
-  
-  body::-webkit-scrollbar-thumb {
-    background-color: #202020;    
-    border-radius: 20px;       
-  }
+  width: 6px;        
+}
+
+body::-webkit-scrollbar-track {
+  background: #181818;      
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: #202020;    
+  border-radius: 20px;       
+}
   

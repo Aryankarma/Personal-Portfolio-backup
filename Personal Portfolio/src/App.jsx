@@ -1,7 +1,19 @@
 import './App.css'
 import TextAnimation from "../components/TextAnimation"
+import Slider from 'react-slick';
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
 
 function App() {
+
+  const settings = {
+    dots: false,
+    infinite: true,
+    speed: 300,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+  };
+
   return <>
 
   {/* top page */}
@@ -126,17 +138,167 @@ function App() {
     </div>
   </div>
 
+  {/* projects page */}
+  <div id='projectspage' className="page">
+
+    <div className="head">Projects<span id="headdotpurple">.</span></div>
+    
+    <div style={{background:"none", boxShadow:'none'}} className="contentBox">
+      {/* <Slider {...settings}>
+      
+      </Slider> */}
+    </div>
+
+    <div style={{background:"none", boxShadow:'none'}} className="contentBox">
+      <div style={{scale:"1.05",marginTop: "1.5rem"}} id='projectBoxContainer' className="removeDesktop">
+
+
+        <div className="projectBox projectBox1">
+          
+          <div className="laptop">
+            <img src="/img/weather-app.png" alt="" />
+          </div>
+
+          <div className="projectAbout">
+            <div className="projectHeading">
+              <h5 style={{ margin: "0", marginLeft: "-5%" }}>Weather App</h5>
+            </div>
+            <div className="projectFeatures">
+              <ol style={{ paddingLeft: "10%" }}>
+                <li>feature xyz</li>
+                <li>feature xyz</li>
+                <li>feature xyz</li>
+              </ol>
+            </div>
+            <div className="checkoutbtn">
+              <a href="https://weather-app-aryankarma.vercel.app/">
+                <button href="">
+                  <p> Checkout
+                    <img style={{ scale: "2", marginLeft: ".3rem" }} src="/svg/Arrow1.svg" alt="" />
+                  </p>
+                </button>
+              </a>
+            </div>
+          </div>
+
+        </div>
+
+
+        <div className="projectBox projectBox2">
+          
+          <div className="laptop">
+            <img src="/img/bookswap.png" alt="" />
+          </div>
+          
+          <div className="projectAbout">
+            <div className="projectHeading">
+              <h5 style={{ margin: "0", marginLeft: "-5%" }}>BookSwap</h5>
+            </div>
+            <div className="projectFeatures">
+              <ol style={{ paddingLeft: "10%" }}>
+                <li>feature xyz</li>
+                <li>feature xyz</li>
+                <li>feature xyz</li>
+              </ol>
+            </div>
+            <div className="checkoutbtn">
+              <a href="https://weather-app-aryankarma.vercel.app/">
+                <button href="">
+                  <p> Checkout
+                    <img style={{ scale: "2", marginLeft: ".3rem" }} src="/svg/Arrow1.svg" alt="" />
+                  </p>
+                </button>
+              </a>
+            </div>
+          </div>
+
+        </div>
+
+
+        <div className="projectBox projectBox3">
+          
+          <div className="laptop">
+            <img src="/img/your-wellness.png" alt="" />
+          </div>
+
+          <div className="projectAbout">
+            <div className="projectHeading">
+              <h5 style={{ margin: "0", marginLeft: "-5%" }}>Your-wellness</h5>
+            </div>
+            <div className="projectFeatures">
+              <ol style={{ paddingLeft: "10%" }}>
+                <li>feature xyz</li>
+                <li>feature xyz</li>
+                <li>feature xyz</li>
+              </ol>
+            </div>
+            <div className="checkoutbtn">
+              <a href="https://weather-app-aryankarma.vercel.app/">
+                <button href="">
+                  <p> Checkout
+                    <img style={{ scale: "2", marginLeft: ".3rem" }} src="/svg/Arrow1.svg" alt="" />
+                  </p>
+                </button>
+              </a>
+            </div>
+          </div>
+
+        </div>  
+
+
+      </div>
+    </div>
+
+
+    <div id='removeMobile' className="hr">
+      <div className="circle"></div>
+      <div id="hrdotpurple" className="circle"></div>
+      <div id="hrdotpurple" className="circle"></div>
+      <div id="hrdotpurple" className="circle"></div>
+    </div>
+
+  </div>
+
+
+
+  {/* connect page */}
+  <div id='connectpage' className="page">
+
+    <div className="head">connect<span id="headdotyellow">.</span></div>
+
+    <form id='form' action="">
+      <input type="text" name="name" id="inputname"  placeholder='Name'/>
+      <input type="text" name="email" id="inputemail" placeholder='Email'/>
+      <textarea name="message" id="inputtextarea" rows="5" placeholder='Message'></textarea>
+      <button type="submit">SEND <img style={{ scale: "1.5", marginLeft: ".3rem" }} src="/svg/sendarrow.svg" alt="" /> </button>
+    </form>
+
+  </div>
 
 
 
   {/* bottom navigator */}
   <div className='removeDesktop' id="navigator">
-    <p href='#homepage' id='home' >Home</p>
-    <p href='#skillspage' id='skills' >Skills</p>
-    {/* <a href='#homepage' id='home' >Home</a>
-    <a href='#skillspage' id='skills' >Skills</a> */}
-    <p id='projects' >Project</p>
-    <p id='connect' >Connect</p>
+    {/* <p href='#homepage' id='home' >Home</p>
+    <p href='#skillspage' id='skills' >Skills</p> */}
+    <a href='#homepage' id='home' >Home</a>
+    <a href='#skillspage' id='skills' >Skills</a>
+    <a href='#projectspage' id='projects' >Project</a>
+    <a href='#connectpage' id='connect' >Connect</a>
+    {/* <p id='projects' >Project</p>
+    <p id='connect' >Connect</p> */}
+  </div>
+  
+  <div className="footer">
+
+    <div className="socials">
+      <a href='https://www.x.com/karmaaryan' target="_blank">Twitter <img src="/svg/Arrow2.svg" alt="" /></a>
+      <a href='https://www.github.com/aryankarma' target="_blank">Github <img src="/svg/Arrow2.svg" alt="" /></a>
+      <a href='https://www.linkedin.com/in/aryankarma' target="_blank">Linkedin <img src="/svg/Arrow2.svg" alt="" /></a>
+    </div>
+    <div className="email">
+      <a href="mailto:aryankarma29@gmail.com" target='_blank' >aryankarma29@gmail.com <img src="/svg/Arrow2.svg" alt="" /></a>
+    </div>
   </div>
 
   </>
