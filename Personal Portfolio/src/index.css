@@ -1,6 +1,8 @@
 #root{
     height: 100vh;
     width: 100vw;
+  scroll-snap-type: y mandatory;
+
 }
 ::selection{
     background-color: black;
@@ -11,7 +13,11 @@
     background-color: black;
     color: white;
 }
-
+html{
+  scroll-snap-type: y proximity;
+  scroll-behavior: smooth;
+  scroll-snap-stop: always;
+}
 /* custom scroll bar */
 body::-webkit-scrollbar {
   width: 6px;        

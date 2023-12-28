@@ -13,6 +13,9 @@
 
 /* font-family: 'DM Serif Display', serif; */
 
+h1,h2,h3,h4,h5,h6,p,span,.head,.tooltip,#subhead{
+  cursor: default;
+}
 .removeDesktop{
   display: none !important;
 }
@@ -32,6 +35,8 @@ body{
   justify-content: center;
   flex-direction: column;
   position: relative;
+  scroll-snap-align: start;
+
 }
 .nav{
   position: absolute;
@@ -46,6 +51,7 @@ body{
   margin-right: 10%;
   transform: scale(1.5);
   rotate: -15deg;
+  cursor: pointer;
 }
 .headProfile{
   width: 100%;
@@ -53,10 +59,10 @@ body{
   justify-content: center;
   align-items: center;
   flex-direction: row-reverse;
-  gap: 2rem;
+  gap: 4rem;
 }
 #headContainer{
-  height: 75px;
+  height: auto;
   display: flex;
   flex-direction: column;
 }
@@ -88,15 +94,17 @@ body{
   align-items: center;
 }
 #profileContainer img{
-  height: 250px;
-  width: 250px;
+  height: 190px;
+  width: 190px;
   border-radius: 100%;
+  box-shadow: 0 0 15px black;
 }
 #subhead{
   font-family: 'Alegreya Sans SC', sans-serif;
   font-size: 20px;
   -webkit-text-stroke: white .01rem;
   color: #B7B7B7;
+  letter-spacing: 1px;
 }
 .hr{
   position: absolute;
@@ -220,7 +228,7 @@ h1{
   text-align: center;
   display: flex;
   justify-content: center;
-  box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.05);
+  box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.05);
   visibility: hidden;
   opacity: 0;
   transition: 250ms ease-in-out;
@@ -321,7 +329,7 @@ a{
   width: 400px !important;
   height: 225px;
   border-radius: 10px;
-  box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.50);
+  box-shadow: 0px 0px 10px 0px black;
   position: relative;
   overflow: hidden;
   left: 50%;
@@ -393,6 +401,8 @@ a{
 }
 .checkoutbtn{
   margin: 1rem 0 0.75rem 0;
+  display: flex;
+  gap: .3rem;
 }
 .checkoutbtn button{
   width: 80px;
@@ -404,6 +414,14 @@ a{
   justify-content: center;
   border: none;
   border-radius: 5px;
+}
+.checkoutbtn button p{
+  cursor:pointer;
+}
+.github{
+  cursor:pointer;
+  width: 23px !important;
+  height: 23px !important;
 }
 .checkoutbtn button p{    
   color: #000;
@@ -507,6 +525,10 @@ a{
   .checkoutbtn button p{
     font-size: 9px;
   }
+  .github{
+    height: 17px !important;
+    width: 17px !important;
+  }
   input,textarea{
     width: 70vw;
     font-family: poppins;
@@ -521,7 +543,6 @@ a{
   .socials{
     gap: .6rem;
   }
-
 
 
 
@@ -548,13 +569,15 @@ a{
     letter-spacing: .5px;
     font-weight: 200;
     font-size: 12px;
+    transition: transform 500ms ease-in-out;
   }
   #navigator a{
+    padding: 0.3rem 0.85rem;
     height: fit-content;
     text-decoration: none;
     color: white;
   }
-  #skills{
+  .activeSection{
     padding: 0.3rem 0.85rem;
     display: flex;
     justify-content: center;
@@ -562,11 +585,15 @@ a{
     border-radius: 16px;
     background: #202020;
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.5) inset;
+    animation: anim 250ms ease-in-out;
   }
-  a:active #skills{
-    transition: 1000ms ease-in-out;
+  @keyframes anim {
+    from{
+      transform: scale(.05);
+    }to{
+      transform: none;
+    }
   }
-
 }
 
 

@@ -11,7 +11,7 @@ function TextAnimation() {
   let forwards = true;
   let skipCount = 0;
   const skipDelay = 25;
-  const speed = 200;
+  const speed = 100;
 
   const wordFlick = () => {
     setInterval(() => {
@@ -56,7 +56,7 @@ function TextAnimation() {
 }
 
 // export default TextAnimation
-export default TextAnimation2;
+export default TextAnimation;
 
 
 function TextAnimation2() {

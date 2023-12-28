@@ -3,6 +3,7 @@ import TextAnimation from "../components/TextAnimation"
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
+import {useState, useEffect} from 'react'
 
 function App() {
 
@@ -14,9 +15,54 @@ function App() {
     slidesToScroll: 1,
   };
 
+  // scroll handle and navigator animation
+  useEffect(()=>{
+
+    const handleScroll = () =>{
+      const scrollHeight = document.documentElement.scrollHeight - window.innerHeight;
+      const scrolled = window.scrollY;
+      const scrollPercentage = Math.round((scrolled / scrollHeight) * 100);
+    
+      const home = document.getElementById("home")
+      const skills = document.getElementById("skills")
+      const projects = document.getElementById("projects")
+      const connect = document.getElementById("connect")
+      const elementArray = [home, skills, projects, connect]
+
+      function udpateClass(element){
+        // addclass
+        elementArray.find((currentElement) => {
+          if(currentElement == element){
+            currentElement.classList.add("activeSection");
+          }else{
+            currentElement.classList.remove("activeSection")
+          }
+        })
+      }
+
+      if(scrollPercentage < 25 && scrollPercentage > 0){
+        // home
+        udpateClass(home)
+      }else if(scrollPercentage < 50 && scrollPercentage > 25){
+        // skills
+        udpateClass(skills)
+      }else if(scrollPercentage <= 79 && scrollPercentage > 50){
+        // projects
+        udpateClass(projects)
+      }else if(scrollPercentage < 100 && scrollPercentage >= 79){
+        // connect
+        udpateClass(connect)
+      }
+    }
+
+    window.addEventListener('scroll', handleScroll) 
+
+}, [])
+
   return <>
 
   {/* top page */}
+<div className="pagecontainer">
   <div id='homepage' className="page">
     <div className="nav">
       <i className="fa-solid fa-moon"></i>
@@ -31,7 +77,7 @@ function App() {
       </div>
 
       <div id="profileContainer">
-        <img src="/img/profilePicture.png" alt="profile picture" />
+        <img src="/img/pfp.jpg" alt="profile picture" />
       </div>
     </div>
     
@@ -164,11 +210,16 @@ function App() {
               </ol>
             </div>
             <div className="checkoutbtn">
-              <a href="https://weather-app-aryankarma.vercel.app/">
+              <a href="https://weather-app-aryankarma.vercel.app/" target="_blank">
                 <button href="">
                   <p> Checkout
                     <img style={{ scale: "2.1", marginLeft: ".4rem" }} src="/svg/Arrow1.svg" alt="" />
                   </p>
+                </button>
+              </a>
+              <a href="https://github.com/aryankarma/weatherapp" target="_blank">
+                <button className='github' href="">
+                    <img style={{height:"15px"}} src="/svg/github.svg" alt="" />
                 </button>
               </a>
             </div>
@@ -195,11 +246,16 @@ function App() {
               </ol>
             </div>
             <div className="checkoutbtn">
-              <a href="https://weather-app-aryankarma.vercel.app/">
+              <a href="" target="_blank">
                 <button href="">
                   <p> Checkout
                     <img style={{ scale: "2.1", marginLeft: ".4rem"  }} src="/svg/Arrow1.svg" alt="" />
                   </p>
+                </button>
+              </a>
+              <a href="" target="_blank">
+                <button className='github' href="">
+                    <img style={{height:"15px"}} src="/svg/github.svg" alt="" />
                 </button>
               </a>
             </div>
@@ -226,11 +282,16 @@ function App() {
               </ol>
             </div>
             <div className="checkoutbtn">
-              <a href="https://weather-app-aryankarma.vercel.app/">
+              <a href="" target="_blank">
                 <button href="">
                   <p> Checkout
                     <img style={{scale: "2.1", marginLeft: ".4rem"}} src="/svg/Arrow1.svg" alt="" />
                   </p>
+                </button>
+              </a>
+              <a href="" target="_blank">
+                <button className='github' href="">
+                    <img style={{height:"15px"}} src="/svg/github.svg" alt="" />
                 </button>
               </a>
             </div>
@@ -263,11 +324,16 @@ function App() {
               </ol>
             </div>
             <div className="checkoutbtn">
-              <a href="https://weather-app-aryankarma.vercel.app/">
+              <a href="" target="_blank">
                 <button href="">
                   <p> Checkout
                     <img style={{ scale: "2", marginLeft: ".3rem" }} src="/svg/Arrow1.svg" alt="" />
                   </p>
+                </button>
+              </a>
+              <a href="" target="_blank">
+                <button className='github' href="">
+                    <img style={{height:"10px"}} src="/svg/github.svg" alt="" />
                 </button>
               </a>
             </div>
@@ -294,11 +360,16 @@ function App() {
               </ol>
             </div>
             <div className="checkoutbtn">
-              <a href="https://weather-app-aryankarma.vercel.app/">
+              <a href="" target="_blank">
                 <button href="">
                   <p> Checkout
                     <img style={{ scale: "2", marginLeft: ".3rem" }} src="/svg/Arrow1.svg" alt="" />
                   </p>
+                </button>
+              </a>
+              <a href="" target="_blank">
+                <button className='github' href="">
+                    <img style={{height:"10px"}} src="/svg/github.svg" alt="" />
                 </button>
               </a>
             </div>
@@ -325,11 +396,16 @@ function App() {
               </ol>
             </div>
             <div className="checkoutbtn">
-              <a href="https://weather-app-aryankarma.vercel.app/">
+              <a href="" target="_blank">
                 <button href="">
                   <p> Checkout
                     <img style={{ scale: "2", marginLeft: ".3rem" }} src="/svg/Arrow1.svg" alt="" />
                   </p>
+                </button>
+              </a>
+              <a href="" target="_blank">
+                <button className='github' href="">
+                    <img style={{height:"10px"}} src="/svg/github.svg" alt="" />
                 </button>
               </a>
             </div>
@@ -354,14 +430,14 @@ function App() {
 
 
   {/* connect page */}
-  <div id='connectpage' className="page">
+  <div style={{height:"calc(100vh - 30px)"}} id='connectpage' className="page">
 
-    <div className="head">connect<span id="headdotyellow">.</span></div>
+    <div className="head">Connect<span id="headdotyellow">.</span></div>
 
     <form id='form' action="">
-      <input type="text" name="name" id="inputname"  placeholder='Name'/>
-      <input type="text" name="email" id="inputemail" placeholder='Email'/>
-      <textarea name="message" id="inputtextarea" rows="5" placeholder='Message'></textarea>
+      <input autoComplete='off' type="text" name="name" id="inputname"  placeholder='Name'/>
+      <input autoComplete='off' type="text" name="email" id="inputemail" placeholder='Email'/>
+      <textarea autoComplete='off' name="message" id="inputtextarea" rows="5" placeholder='Message'></textarea>
       <button type="submit">SEND <img style={{ scale: "1.5", marginLeft: ".3rem" }} src="/svg/sendarrow.svg" alt="" /> </button>
     </form>
 
@@ -370,10 +446,10 @@ function App() {
 
 
   {/* bottom navigator */}
-  <div className='removeDesktop' id="navigator">
+  <div className="removeDesktop" id="navigator">
     {/* <p href='#homepage' id='home' >Home</p>
     <p href='#skillspage' id='skills' >Skills</p> */}
-    <a href='#homepage' id='home' >Home</a>
+    <a href='#homepage' className='activeSection' id='home' >Home</a>
     <a href='#skillspage' id='skills' >Skills</a>
     <a href='#projectspage' id='projects' >Project</a>
     <a href='#connectpage' id='connect' >Connect</a>
@@ -392,8 +468,10 @@ function App() {
       <a href="mailto:aryankarma29@gmail.com" target='_blank' >aryankarma29@gmail.com <img src="/svg/Arrow2.svg" alt="" /></a>
     </div>
   </div>
+  </div>
 
   </>
+  
 }
 
 export default App;
