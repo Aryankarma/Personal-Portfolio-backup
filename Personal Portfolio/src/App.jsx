@@ -143,14 +143,106 @@ function App() {
 
     <div className="head">Projects<span id="headdotpurple">.</span></div>
     
-    <div style={{background:"none", boxShadow:'none'}} className="contentBox">
-      {/* <Slider {...settings}>
+    <div style={{background:"none", boxShadow:'none'}} className="contentBox" id='removeMobile'>
+      <Slider {...settings}>
       
-      </Slider> */}
+      <div className="projectBox projectBox1">
+          
+          <div className="laptop">
+            <img src="/img/weather-app.png" alt="" />
+          </div>
+
+          <div className="projectAbout">
+            <div className="projectHeading">
+              <h5 style={{ margin: "0", marginLeft: "-2%" }}>Weather App</h5>
+            </div>
+            <div className="projectFeatures">
+              <ol style={{ paddingLeft: "7%" }}>
+                <li>feature xyz</li>
+                <li>feature xyz</li>
+                <li>feature xyz</li>
+              </ol>
+            </div>
+            <div className="checkoutbtn">
+              <a href="https://weather-app-aryankarma.vercel.app/">
+                <button href="">
+                  <p> Checkout
+                    <img style={{ scale: "2.1", marginLeft: ".4rem" }} src="/svg/Arrow1.svg" alt="" />
+                  </p>
+                </button>
+              </a>
+            </div>
+          </div>
+
+        </div>
+
+
+        <div className="projectBox projectBox2">
+          
+          <div className="laptop">
+            <img src="/img/bookswap.png" alt="" />
+          </div>
+          
+          <div className="projectAbout">
+            <div className="projectHeading">
+              <h5 style={{ margin: "0", marginLeft: "-2%" }}>BookSwap</h5>
+            </div>
+            <div className="projectFeatures">
+              <ol style={{ paddingLeft: "7%" }}>
+                <li>feature xyz</li>
+                <li>feature xyz</li>
+                <li>feature xyz</li>
+              </ol>
+            </div>
+            <div className="checkoutbtn">
+              <a href="https://weather-app-aryankarma.vercel.app/">
+                <button href="">
+                  <p> Checkout
+                    <img style={{ scale: "2.1", marginLeft: ".4rem"  }} src="/svg/Arrow1.svg" alt="" />
+                  </p>
+                </button>
+              </a>
+            </div>
+          </div>
+
+        </div>
+
+
+        <div className="projectBox projectBox3">
+          
+          <div className="laptop">
+            <img src="/img/your-wellness.png" alt="" />
+          </div>
+
+          <div className="projectAbout">
+            <div className="projectHeading">
+              <h5 style={{ margin: "0", marginLeft: "-2%" }}>Your-wellness</h5>
+            </div>
+            <div className="projectFeatures">
+              <ol style={{ paddingLeft: "7%" }}>
+                <li>feature xyz</li>
+                <li>feature xyz</li>
+                <li>feature xyz</li>
+              </ol>
+            </div>
+            <div className="checkoutbtn">
+              <a href="https://weather-app-aryankarma.vercel.app/">
+                <button href="">
+                  <p> Checkout
+                    <img style={{scale: "2.1", marginLeft: ".4rem"}} src="/svg/Arrow1.svg" alt="" />
+                  </p>
+                </button>
+              </a>
+            </div>
+          </div>
+
+        </div>  
+
+      </Slider>
     </div>
 
     <div style={{background:"none", boxShadow:'none'}} className="contentBox">
-      <div style={{scale:"1.05",marginTop: "1.5rem"}} id='projectBoxContainer' className="removeDesktop">
+      <div style={{scale:"1.05",marginTop: "1.5rem"}} id='projectBoxContainer' className='removeDesktop' >
 
 
         <div className="projectBox projectBox1">
