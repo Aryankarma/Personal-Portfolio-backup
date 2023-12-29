@@ -415,13 +415,30 @@ a{
   border: none;
   border-radius: 5px;
 }
+.checkoutbtn button:hover .arrowimg{
+  transition: 300ms ease-in-out;
+  transform: translate(.75px, -.75px);
+}
+form button:hover .arrowimg{
+  transition: 150ms ease-in-out;
+  transform: translateX(2px);
+}
+.socials a:hover .arrowimg,
+.email a:hover .arrowimg{
+  transition: 300ms ease-in-out;
+  transform: translate(1.25px, -1.25px);
+}
 .checkoutbtn button p{
-  cursor:pointer;
+  cursor: pointer;
 }
 .github{
-  cursor:pointer;
+  cursor: pointer;
   width: 23px !important;
   height: 23px !important;
+}
+.github:hover .githubimg{
+  transform: scale(1.075) !important;
+  transition: 300ms !important;
 }
 .checkoutbtn button p{    
   color: #000;

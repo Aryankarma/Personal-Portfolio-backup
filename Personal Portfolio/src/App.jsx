@@ -213,13 +213,13 @@ function App() {
               <a href="https://weather-app-aryankarma.vercel.app/" target="_blank">
                 <button href="">
                   <p> Checkout
-                    <img style={{ scale: "2.1", marginLeft: ".4rem" }} src="/svg/Arrow1.svg" alt="" />
+                    <img className='arrowimg' style={{ scale: "2.1", marginLeft: ".3rem" }} src="/svg/Arrow1.svg" alt="" />
                   </p>
                 </button>
               </a>
               <a href="https://github.com/aryankarma/weatherapp" target="_blank">
                 <button className='github' href="">
-                    <img style={{height:"15px"}} src="/svg/github.svg" alt="" />
+                    <img className='githubimg' style={{height:"15px"}} src="/svg/github.svg" alt="" />
                 </button>
               </a>
             </div>
@@ -249,13 +249,13 @@ function App() {
               <a href="" target="_blank">
                 <button href="">
                   <p> Checkout
-                    <img style={{ scale: "2.1", marginLeft: ".4rem"  }} src="/svg/Arrow1.svg" alt="" />
+                    <img className='arrowimg' style={{ scale: "2.1", marginLeft: ".3rem"  }} src="/svg/Arrow1.svg" alt="" />
                   </p>
                 </button>
               </a>
               <a href="" target="_blank">
                 <button className='github' href="">
-                    <img style={{height:"15px"}} src="/svg/github.svg" alt="" />
+                    <img className='githubimg' style={{height:"15px"}} src="/svg/github.svg" alt="" />
                 </button>
               </a>
             </div>
@@ -285,13 +285,13 @@ function App() {
               <a href="" target="_blank">
                 <button href="">
                   <p> Checkout
-                    <img style={{scale: "2.1", marginLeft: ".4rem"}} src="/svg/Arrow1.svg" alt="" />
+                    <img className='arrowimg' style={{scale: "2.1", marginLeft: ".3rem"}} src="/svg/Arrow1.svg" alt="" />
                   </p>
                 </button>
               </a>
               <a href="" target="_blank">
                 <button className='github' href="">
-                    <img style={{height:"15px"}} src="/svg/github.svg" alt="" />
+                    <img className='githubimg' style={{height:"15px"}} src="/svg/github.svg" alt="" />
                 </button>
               </a>
             </div>
@@ -327,13 +327,13 @@ function App() {
               <a href="" target="_blank">
                 <button href="">
                   <p> Checkout
-                    <img style={{ scale: "2", marginLeft: ".3rem" }} src="/svg/Arrow1.svg" alt="" />
+                    <img className='arrowimg' style={{ scale: "2", marginLeft: ".3rem" }} src="/svg/Arrow1.svg" alt="" />
                   </p>
                 </button>
               </a>
               <a href="" target="_blank">
                 <button className='github' href="">
-                    <img style={{height:"10px"}} src="/svg/github.svg" alt="" />
+                    <img className='githubimg' style={{height:"10px"}} src="/svg/github.svg" alt="" />
                 </button>
               </a>
             </div>
@@ -363,13 +363,13 @@ function App() {
               <a href="" target="_blank">
                 <button href="">
                   <p> Checkout
-                    <img style={{ scale: "2", marginLeft: ".3rem" }} src="/svg/Arrow1.svg" alt="" />
+                    <img className='arrowimg' style={{ scale: "2", marginLeft: ".3rem" }} src="/svg/Arrow1.svg" alt="" />
                   </p>
                 </button>
               </a>
               <a href="" target="_blank">
                 <button className='github' href="">
-                    <img style={{height:"10px"}} src="/svg/github.svg" alt="" />
+                    <img className='githubimg' style={{height:"10px"}} src="/svg/github.svg" alt="" />
                 </button>
               </a>
             </div>
@@ -399,13 +399,13 @@ function App() {
               <a href="" target="_blank">
                 <button href="">
                   <p> Checkout
-                    <img style={{ scale: "2", marginLeft: ".3rem" }} src="/svg/Arrow1.svg" alt="" />
+                    <img className='arrowimg' style={{ scale: "2", marginLeft: ".3rem" }} src="/svg/Arrow1.svg" alt="" />
                   </p>
                 </button>
               </a>
               <a href="" target="_blank">
                 <button className='github' href="">
-                    <img style={{height:"10px"}} src="/svg/github.svg" alt="" />
+                    <img className='githubimg' style={{height:"10px"}} src="/svg/github.svg" alt="" />
                 </button>
               </a>
             </div>
@@ -438,7 +438,7 @@ function App() {
       <input autoComplete='off' type="text" name="name" id="inputname"  placeholder='Name'/>
       <input autoComplete='off' type="text" name="email" id="inputemail" placeholder='Email'/>
       <textarea autoComplete='off' name="message" id="inputtextarea" rows="5" placeholder='Message'></textarea>
-      <button type="submit">SEND <img style={{ scale: "1.5", marginLeft: ".3rem" }} src="/svg/sendarrow.svg" alt="" /> </button>
+      <button type="submit">SEND <img className='arrowimg' style={{ scale: "1.5", marginLeft: ".3rem" }} src="/svg/sendarrow.svg" alt="" /> </button>
     </form>
 
   </div>
@@ -446,26 +446,26 @@ function App() {
 
 
   {/* bottom navigator */}
-  <div className="removeDesktop" id="navigator">
+  <div className="removeDesktop" id="navigator"> 
     {/* <p href='#homepage' id='home' >Home</p>
     <p href='#skillspage' id='skills' >Skills</p> */}
     <a href='#homepage' className='activeSection' id='home' >Home</a>
     <a href='#skillspage' id='skills' >Skills</a>
-    <a href='#projectspage' id='projects' >Project</a>
-    <a href='#connectpage' id='connect' >Connect</a>
+    <a href='#projectspage' id='projects' >Project</a> 
+    <a href='#connectpage' id='connect' >Connect</a> 
     {/* <p id='projects' >Project</p>
-    <p id='connect' >Connect</p> */}
+    <p id='connect' >Connect</p> */} 
   </div>
   
   <div className="footer">
 
     <div className="socials">
-      <a href='https://www.x.com/karmaaryan' target="_blank">Twitter <img src="/svg/Arrow2.svg" alt="" /></a>
-      <a href='https://www.github.com/aryankarma' target="_blank">Github <img src="/svg/Arrow2.svg" alt="" /></a>
-      <a href='https://www.linkedin.com/in/aryankarma' target="_blank">Linkedin <img src="/svg/Arrow2.svg" alt="" /></a>
+      <a href='https://www.x.com/karmaaryan' target="_blank">Twitter <img className='arrowimg' src="/svg/Arrow2.svg" alt="" /></a>
+      <a href='https://www.github.com/aryankarma' target="_blank">Github <img className='arrowimg' src="/svg/Arrow2.svg" alt="" /></a>
+      <a href='https://www.linkedin.com/in/aryankarma' target="_blank">Linkedin <img className='arrowimg' src="/svg/Arrow2.svg" alt="" /></a>
     </div>
     <div className="email">
-      <a href="mailto:aryankarma29@gmail.com" target='_blank' >aryankarma29@gmail.com <img src="/svg/Arrow2.svg" alt="" /></a>
+      <a href="mailto:aryankarma29@gmail.com" target='_blank' >aryankarma29@gmail.com <img className='arrowimg' src="/svg/Arrow2.svg" alt="" /></a>
     </div>
   </div>
   </div>
