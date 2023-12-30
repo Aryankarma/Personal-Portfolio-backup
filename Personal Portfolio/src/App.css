@@ -431,6 +431,14 @@ form button:hover .arrowimg{
 .checkoutbtn button p{
   cursor: pointer;
 }
+input:focus, textarea:focus{
+  border-radius: 4px;
+  transition: 300ms ease-in-out;
+  background-color: #333;
+}
+textarea:focus{
+  border-radius: 10px;
+}
 .github{
   cursor: pointer;
   width: 23px !important;

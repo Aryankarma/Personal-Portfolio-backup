@@ -32,6 +32,9 @@ function App() {
       function udpateClass(element){
         // addclass
         elementArray.find((currentElement) => {
+
+          console.log(currentElement + " scrollpercentage:  " + scrollPercentage)
+
           if(currentElement == element){
             currentElement.classList.add("activeSection");
           }else{
@@ -46,10 +49,10 @@ function App() {
       }else if(scrollPercentage < 50 && scrollPercentage > 25){
         // skills
         udpateClass(skills)
-      }else if(scrollPercentage <= 79 && scrollPercentage > 50){
+      }else if(scrollPercentage <= 87 && scrollPercentage > 50){
         // projects
         udpateClass(projects)
-      }else if(scrollPercentage < 100 && scrollPercentage >= 79){
+      }else if(scrollPercentage < 100 && scrollPercentage >= 87){
         // connect
         udpateClass(connect)
       }
@@ -434,10 +437,10 @@ function App() {
 
     <div className="head">Connect<span id="headdotyellow">.</span></div>
 
-    <form id='form' action="">
-      <input autoComplete='off' type="text" name="name" id="inputname"  placeholder='Name'/>
-      <input autoComplete='off' type="text" name="email" id="inputemail" placeholder='Email'/>
-      <textarea autoComplete='off' name="message" id="inputtextarea" rows="5" placeholder='Message'></textarea>
+    <form id='form' method='POST' action="https://formspree.io/f/mleqedkj">
+      <input autoComplete='off' type="text" name="name" id="inputname"  placeholder='Name' required/>
+      <input autoComplete='off' type="email" name="email" id="inputemail" placeholder='Email' required/>
+      <textarea autoComplete='off' type="text" name="message" id="inputtextarea" rows="5" placeholder='Message' required></textarea>
       <button type="submit">SEND <img className='arrowimg' style={{ scale: "1.5", marginLeft: ".3rem" }} src="/svg/sendarrow.svg" alt="" /> </button>
     </form>
 
