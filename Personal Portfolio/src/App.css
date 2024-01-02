@@ -48,10 +48,11 @@ body{
 }
 .nav i{
   margin-left: auto;
-  margin-right: 10%;
+  padding: 2rem;
   transform: scale(1.5);
   rotate: -15deg;
   cursor: pointer;
+  filter: drop-shadow(0px 0px 5px #ddd);
 }
 .headProfile{
   width: 100%;
@@ -461,6 +462,152 @@ textarea:focus{
 
 
 
+/* .................................... Progress Bar .................................... */
+  
+
+
+.anchors-wrap {
+  padding: 0 .5rem;
+  z-index: 10;
+  position: fixed;
+  top: 50%;
+  right: 0;
+  transform: translate(0, -50%);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: 60vh;
+}
+.anchors{
+  padding-left: 0;
+}
+
+.anchors:before {
+  content: '';    
+  display: block;
+  z-index: -1;
+  position: absolute;
+  top: 1.5rem;
+  bottom: 1.5rem;
+  left: 0;
+  right: 0;
+  width: .1rem;
+  margin: 0 auto;
+  background-color: #aaa;
+}
+
+.anchors{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.anchors a {
+  position: relative;
+  display: flex;
+  height: 3rem;
+  width: 3rem;
+}
+
+.anchors a:before,
+.anchors a:after {
+  content: '';
+  display: block;
+  margin: auto;
+  border: 1px solid white;
+  border-radius: 50%;
+  -webkit-transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.anchors a:before {
+  width: .8rem;
+  height: .8rem;
+  background-color: black;
+}
+
+.anchors a:after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 1.25rem;
+  height: 1.25rem;
+  background-color: #aaa;
+  -webkit-transform: scale(0);
+  transform: scale(0);
+  -webkit-transform-origin: center;
+  transform-origin: center;
+}
+.anchors a:hover:before {
+  background-color: white;
+  box-shadow: 0 0 10px black;
+}
+.anchors a.active:after {
+  -webkit-transform: scale(1);
+  transform: scale(1)
+}
+
+.colorBlock {
+  margin-bottom: 2rem
+}
+
+.colorBlock-inner {
+  min-height: 23rem;
+  height: 100%;
+  padding: 2.7rem 3rem
+}
+
+.colorBlock .title {
+  margin-bottom: 2rem
+}
+
+#container1,#container2,#container3,#container4,#container5{
+  transition:300ms ease-in-out;
+  scroll-behavior: smooth;
+  margin: 3rem;
+}
+
+ul{
+  list-style-type: none;
+}
+
+/* #hitcontainer1:hover, #hitcontainer1.active { 
+  background-color: black;
+}
+#hitcontainer2:hover, #hitcontainer2.active { 
+  background-color: black;
+}
+#hitcontainer3:hover, #hitcontainer3.active { 
+  background-color: black;
+}
+#hitcontainer4:hover, #hitcontainer4.active { 
+  background-color: black;
+}
+#hitcontainer5:hover, #hitcontainer5.active { 
+  background-color: black;
+} */
+
+/* #hitcontainer1::before, #hitcontainer2::before,#hitcontainer3::before,#hitcontainer4::before,#hitcontainer5::before{
+  background-color: white !important;
+} */
+
+#hitcontainer1 a::before, #hitcontainer2 a::before,#hitcontainer3 a::before,#hitcontainer4 a::before,#hitcontainer5 a::before{
+  background-color: white;
+}
+
+/* smooth scroll */
+/* #js-scroll{
+  scroll-behavior: smooth;
+  transition: 1000ms linear;
+} */
+
 
 
 
@@ -562,17 +709,27 @@ textarea:focus{
     width: 70vw;
   }
   .footer{
-    width: 94vw;
+    width: 100vw;
     font-size: 11px;
+    position: absolute;
+    bottom: 0;
   }
   .socials{
     gap: .6rem;
   }
 
 
+  /* fix after side progress bar */
+  .pagecontainer{
+    width: 100vw;
+    overflow-x: hidden;
+    position: relative;
+  }
 
-
-
+  #fixpadding{
+    margin-bottom: -5.5rem;
+    padding-bottom: 4.5rem;
+  }
 
 
 

@@ -15,7 +15,7 @@ function App() {
     slidesToScroll: 1,
   };
 
-  // scroll handle and navigator animation
+//   // scroll handle and navigator animation
   useEffect(()=>{
 
     const handleScroll = () =>{
@@ -58,14 +58,173 @@ function App() {
       }
     }
 
-    window.addEventListener('scroll', handleScroll) 
+    console.log("scrolling")
+
+    window.addEventListener('scroll', handleScroll)
 
 }, [])
 
+// Side progress bar script
+useEffect(()=>{
+  const handleScroll = () =>{
+
+    const scrollHeight = document.documentElement.scrollHeight - window.innerHeight;
+    const scrolled = window.scrollY;
+    const scrollPercentage = Math.round((scrolled / scrollHeight) * 100);
+
+    const firstPage = document.getElementById("homepage")
+    const secondPage = document.getElementById("biopage")
+    const thirdPage = document.getElementById("skillspage")
+    const fourthPage = document.getElementById("projectspage")
+    const fifthPage = document.getElementById("connectpage")
+    const elementArray = [firstPage, secondPage, thirdPage, fourthPage, fifthPage]
+
+    function udpateClass(element) {
+
+        if(element == firstPage){
+
+            const removeStyle = document.createElement('style');
+            const style = document.createElement('style');
+            
+            removeStyle.textContent = `
+                #hitcontainer2::before, #hitcontainer3::before, #hitcontainer4::before, #hitcontainer5::before{
+                    background-color: black;           
+            }
+            `
+            
+            style.textContent = `
+            #hitcontainer1::before{
+                background-color: white;
+                box-shadow: 0 0 10px black; 
+            }
+            `
+
+            document.head.appendChild(removeStyle);
+            document.head.appendChild(style);
+
+        }else if(element == secondPage){
+
+            const removeStyle = document.createElement('style');
+            const style = document.createElement('style');
+            
+            removeStyle.textContent = `
+                #hitcontainer1::before, #hitcontainer3::before, #hitcontainer4::before, #hitcontainer5::before{
+                    background-color: black;
+                    transition:scale(1);
+                    transition: 300ms; 
+                } 
+            `
+            
+            style.textContent = `
+            #hitcontainer2::before{
+                background-color: white;
+                box-shadow: 0 0 10px black; 
+            }
+            `
+
+            document.head.appendChild(removeStyle);
+            document.head.appendChild(style);
+        }else if(element == thirdPage){
+
+            const removeStyle = document.createElement('style');
+            const style = document.createElement('style');
+            
+            removeStyle.textContent = `
+                #hitcontainer1::before, #hitcontainer2::before,#hitcontainer4::before, #hitcontainer5::before{
+                    background-color: black;
+                    transition:scale(1);
+                    transition: 300ms; 
+                } 
+            `
+            
+            style.textContent = `
+            #hitcontainer3::before{
+                background-color: white;  
+                box-shadow: 0 0 10px black;              
+            }
+            `;     
+
+            document.head.appendChild(removeStyle);
+            document.head.appendChild(style);
+        }else if(element == fourthPage){
+
+            const removeStyle = document.createElement('style');
+            const style = document.createElement('style');
+            const style2 = document.createElement('style');
+            
+            removeStyle.textContent = `
+                #hitcontainer1::before, #hitcontainer2::before, #hitcontainer3::before, #hitcontainer5::before{
+                    background-color: black;
+                    transition:scale(1);
+                    transition: 300ms; 
+                } 
+            `
+            
+            style.textContent = `
+            #hitcontainer4::before {
+                background-color: white;
+                box-shadow: 0 0 10px black;
+            }
+            `;
+
+
+            document.head.appendChild(removeStyle);
+            document.head.appendChild(style);
+        }else if(element == fifthPage){
+
+            const removeStyle = document.createElement('style');
+            const style = document.createElement('style');
+            const style2 = document.createElement('style');
+            
+            removeStyle.textContent = `
+                #hitcontainer1::before, #hitcontainer2::before, #hitcontainer3::before, #hitcontainer4::before, #hitcontainer4::before{
+                    background-color: black;
+                    transition:scale(1);
+                    transition: 300ms; 
+                } 
+            `
+            
+            style.textContent = `
+            #hitcontainer5::before {
+                background-color: white;
+                box-shadow: 0 0 10px black;
+              }
+            `;
+
+
+            document.head.appendChild(removeStyle);
+            document.head.appendChild(style);
+        }
+    }
+
+    if(scrollPercentage < 20){
+        udpateClass(firstPage)
+    }else if(scrollPercentage < 40 && scrollPercentage > 20){
+        udpateClass(secondPage)
+    }else if(scrollPercentage < 60 && scrollPercentage > 40){
+        udpateClass(thirdPage)
+    }else if(scrollPercentage < 80 && scrollPercentage > 60){
+        udpateClass(fourthPage)
+    }else if(scrollPercentage < 100 && scrollPercentage > 80){
+        udpateClass(fifthPage)
+    }
+  }
+  
+  window.addEventListener('scroll', handleScroll)
+
+}, [])
+
+// const [hoverPosition, setHoverPosition] = useState({ x: 0, y: 0 });
+
+const handleMouseMove = (e) => {
+  setHoverPosition({ x: e.nativeEvent.offsetX, y: e.nativeEvent.offsetY });
+};
+
   return <>
 
-  {/* top page */}
-<div className="pagecontainer">
+<div id='fixpadding' className="pagecontainer">
+
+  {/* Home page */}
   <div id='homepage' className="page">
     <div className="nav">
       <i className="fa-solid fa-moon"></i>
@@ -84,30 +243,32 @@ function App() {
       </div>
     </div>
     
-    <div id='removeMobile' className="hr">
+    {/* <div id='removeMobile' className="hr">
       <div className="circle"></div>
       <div className="circle"></div>
       <div className="circle"></div>
       <div className="circle"></div>
-    </div>
+    </div> */}
   </div>
 
   {/* bio page */}
-  <div className="page">
+  <div id="biopage" className="page">
     <div id='removeMobile' className="head">Bio<span id="headdotpurple">.</span></div>
 
     <div className="contentBox">
-      <p className='content'>
-      “ <span id='bold'>Keen interest</span> in attention to detail and passion for the smallest details makes my work pixel perfect.”
-      </p>
+      <div className="card-content">
+        <p className='content'>
+        “ <span id='bold'>Keen interest</span> in attention to detail and passion for the smallest details makes my work pixel perfect.”
+        </p>
+      </div>
     </div>
 
-    <div id='removeMobile' className="hr">
+    {/* <div id='removeMobile' className="hr">
       <div className="circle"></div>
       <div className="circle"></div>
       <div className="circle"></div>
       <div id="hrdotpurple" className="circle"></div>
-    </div>
+    </div> */}
   </div>
 
   {/* skills page */}
@@ -179,12 +340,12 @@ function App() {
       </div>
     </div>
 
-    <div id='removeMobile' className="hr">
+    {/* <div id='removeMobile' className="hr">
       <div className="circle"></div>
       <div className="circle"></div>
       <div id="hrdotlightblue"  className="circle"></div>
       <div id="hrdotlightblue" className="circle"></div>
-    </div>
+    </div> */}
   </div>
 
   {/* projects page */}
@@ -421,12 +582,12 @@ function App() {
     </div>
 
 
-    <div id='removeMobile' className="hr">
+    {/* <div id='removeMobile' className="hr">
       <div className="circle"></div>
       <div id="hrdotpurple" className="circle"></div>
       <div id="hrdotpurple" className="circle"></div>
       <div id="hrdotpurple" className="circle"></div>
-    </div>
+    </div> */}
 
   </div>
 
@@ -447,6 +608,22 @@ function App() {
   </div>
 
 
+  <div className="footer">
+
+    <div className="socials">
+      <a href='https://www.x.com/karmaaryan' target="_blank">Twitter <img className='arrowimg' src="/svg/Arrow2.svg" alt="" /></a>
+      <a href='https://www.github.com/aryankarma' target="_blank">Github <img className='arrowimg' src="/svg/Arrow2.svg" alt="" /></a>
+      <a href='https://www.linkedin.com/in/aryankarma' target="_blank">Linkedin <img className='arrowimg' src="/svg/Arrow2.svg" alt="" /></a>
+      <a href='https://www.bento.me/aryankarma' target="_blank">Bento<img className='arrowimg' src="/svg/Arrow2.svg" alt="" /></a>
+    </div>
+    <div className="email">
+      <a href="mailto:aryankarma29@gmail.com" target='_blank' >aryankarma29@gmail.com <img className='arrowimg' src="/svg/Arrow2.svg" alt="" /></a>
+    </div>
+  </div>
+
+</div>
+
+
 
   {/* bottom navigator */}
   <div className="removeDesktop" id="navigator"> 
@@ -459,18 +636,18 @@ function App() {
     {/* <p id='projects' >Project</p>
     <p id='connect' >Connect</p> */} 
   </div>
-  
-  <div className="footer">
 
-    <div className="socials">
-      <a href='https://www.x.com/karmaaryan' target="_blank">Twitter <img className='arrowimg' src="/svg/Arrow2.svg" alt="" /></a>
-      <a href='https://www.github.com/aryankarma' target="_blank">Github <img className='arrowimg' src="/svg/Arrow2.svg" alt="" /></a>
-      <a href='https://www.linkedin.com/in/aryankarma' target="_blank">Linkedin <img className='arrowimg' src="/svg/Arrow2.svg" alt="" /></a>
-    </div>
-    <div className="email">
-      <a href="mailto:aryankarma29@gmail.com" target='_blank' >aryankarma29@gmail.com <img className='arrowimg' src="/svg/Arrow2.svg" alt="" /></a>
-    </div>
-  </div>
+  
+
+  {/* Progress Bar */}
+  <div id='removeMobile' className="anchors-wrap">
+    <ul id='removeMobile' class="anchors">
+      <li><a id="hitcontainer1" href="#homepage" ></a></li>
+      <li><a id="hitcontainer2" href="#biopage" ></a></li>
+      <li><a id="hitcontainer3" href="#skillspage" ></a></li>
+      <li><a id="hitcontainer4" href="#projectspage" ></a></li>
+      <li><a id="hitcontainer5" href="#connectpage" ></a></li>
+    </ul>
   </div>
 
   </>
