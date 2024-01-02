@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import '../src/App.css'
+import '../App.css'
 
 const words = ['A Web Developer', 'A Web Designer', 'A Tech Enthusiast'];
 

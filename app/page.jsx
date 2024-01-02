@@ -1,5 +1,21 @@
+// // pages/index.js
+// import React from 'react';
+
+// const HomePage = () => {
+//   return (
+//     <div>
+//       <h1>Welcome to My Next.js App</h1>
+//       <a href="/about">About page</a>
+//     </div>
+//   );
+// };
+
+// export default HomePage; 
+
+"use client"
+
 import './App.css'
-import TextAnimation from "../components/TextAnimation"
+import TextAnimation from "./components/TextAnimation"
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
