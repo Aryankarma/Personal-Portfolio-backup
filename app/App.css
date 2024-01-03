@@ -75,7 +75,7 @@
   }
   #imaryan{
     color: transparent !important;
-    /* background-image: url("./assets/bgheadingsmall.png"); */
+    background-image: url("../public/img/bgheadingsmall.png");
     background-size: cover;
     background-repeat: no-repeat;
     -webkit-background-clip: text;
@@ -616,10 +616,15 @@
   
   
   
-  /* Media Queries */
+/*..................................Media Queries................................*/
    
+
+
   /* Small smartphones (iPhone 4, Galaxy S2, etc.) */
   @media only screen and (max-width : 475px){
+    body{
+      display: block;
+    }
     .nav{
       height: 60px;
       position: static;
@@ -730,8 +735,6 @@
       margin-bottom: -5.5rem;
       padding-bottom: 4.5rem;
     }
-  
-  
   
      
     /* bottom navigator */

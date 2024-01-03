@@ -1,25 +1,11 @@
-// // pages/index.js
-// import React from 'react';
-
-// const HomePage = () => {
-//   return (
-//     <div>
-//       <h1>Welcome to My Next.js App</h1>
-//       <a href="/about">About page</a>
-//     </div>
-//   );
-// };
-
-// export default HomePage; 
-
 "use client"
-
 import './App.css'
 import TextAnimation from "./components/TextAnimation"
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
-import {useState, useEffect} from 'react'
+import React, {useState, useEffect} from 'react'
+
 
 function App() {
 
@@ -31,52 +17,50 @@ function App() {
     slidesToScroll: 1,
   };
 
+
+
 //   // scroll handle and navigator animation
-  useEffect(()=>{
-
-    const handleScroll = () =>{
-      const scrollHeight = document.documentElement.scrollHeight - window.innerHeight;
-      const scrolled = window.scrollY;
-      const scrollPercentage = Math.round((scrolled / scrollHeight) * 100);
-    
-      const home = document.getElementById("home")
-      const skills = document.getElementById("skills")
-      const projects = document.getElementById("projects")
-      const connect = document.getElementById("connect")
-      const elementArray = [home, skills, projects, connect]
-
-      function udpateClass(element){
-        // addclass
-        elementArray.find((currentElement) => {
-
-          console.log(currentElement + " scrollpercentage:  " + scrollPercentage)
-
-          if(currentElement == element){
-            currentElement.classList.add("activeSection");
-          }else{
-            currentElement.classList.remove("activeSection")
-          }
-        })
-      }
-
-      if(scrollPercentage < 25 && scrollPercentage > 0){
-        // home
-        udpateClass(home)
-      }else if(scrollPercentage < 50 && scrollPercentage > 25){
-        // skills
-        udpateClass(skills)
-      }else if(scrollPercentage <= 87 && scrollPercentage > 50){
-        // projects
-        udpateClass(projects)
-      }else if(scrollPercentage < 100 && scrollPercentage >= 87){
-        // connect
-        udpateClass(connect)
-      }
+useEffect(()=>{
+  const handleScroll = () =>{
+    const scrollHeight = document.documentElement.scrollHeight - window.innerHeight;
+    const scrolled = window.scrollY;
+    const scrollPercentage = Math.round((scrolled / scrollHeight) * 100);
+  
+    const home = document.getElementById("home")
+    const skills = document.getElementById("skills")
+    const projects = document.getElementById("projects")
+    const connect = document.getElementById("connect")
+    const elementArray = [home, skills, projects, connect]
+    function udpateClass(element){
+      // addclass
+      elementArray.find((currentElement) => {
+        // console.log(currentElement + " scrollpercentage:  " + scrollPercentage)
+        if(currentElement == element){
+          currentElement.classList.add("activeSection");
+        }else{
+          currentElement.classList.remove("activeSection")
+        }
+      })
     }
-
-    console.log("scrolling")
-
-    window.addEventListener('scroll', handleScroll)
+    if(scrollPercentage < 25 && scrollPercentage > 0){
+      // home
+      udpateClass(home)
+    }else if(scrollPercentage < 50 && scrollPercentage > 25){
+      // skills
+      udpateClass(skills)
+    }else if(scrollPercentage <= 87 && scrollPercentage > 50){
+      // projects
+      udpateClass(projects)
+    }else if(scrollPercentage < 100 && scrollPercentage >= 87){
+      // connect
+      udpateClass(connect)
+    }
+  }
+  // console.log("scrolling")
+  window.addEventListener('scroll', handleScroll)
+  return () => {
+    window.removeEventListener('scroll', handleScroll);
+  };
 
 }, [])
 
@@ -228,13 +212,11 @@ useEffect(()=>{
   
   window.addEventListener('scroll', handleScroll)
 
+  return () => {
+    window.removeEventListener('scroll', handleScroll);
+  };
+
 }, [])
-
-// const [hoverPosition, setHoverPosition] = useState({ x: 0, y: 0 });
-
-const handleMouseMove = (e) => {
-  setHoverPosition({ x: e.nativeEvent.offsetX, y: e.nativeEvent.offsetY });
-};
 
   return <>
 
@@ -242,7 +224,7 @@ const handleMouseMove = (e) => {
 
   {/* Home page */}
   <div id='homepage' className="page">
-    <div className="nav">
+    <div style={{visibility:"hidden"}} className="nav">
       <i className="fa-solid fa-moon"></i>
     </div>
 

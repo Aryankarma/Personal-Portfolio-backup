@@ -1,7 +1,8 @@
+"use client"
 import React, { useState, useEffect } from "react";
 import '../App.css'
 
-const words = ['A Web Developer', 'A Web Designer', 'A Tech Enthusiast'];
+const words = ['Web Developer', 'Web Designer', 'Tech Enthusiast'];
 
 
 function TextAnimation() {
@@ -51,7 +52,7 @@ function TextAnimation() {
   }, []); // Run once when the component mounts
 
   return (
-      <div id="subhead">{part}</div>
+      <div id="subhead"> A {part}</div>
   );
 }
 
