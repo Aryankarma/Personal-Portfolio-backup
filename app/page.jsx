@@ -224,8 +224,9 @@ useEffect(()=>{
 
   {/* Home page */}
   <div id='homepage' className="page">
-    <div style={{visibility:"hidden"}} className="nav">
-      <i className="fa-solid fa-moon"></i>
+    <div className="nav">
+      <i style={{visibility:"hidden"}} className="fa-solid fa-moon"></i>
+      <button><a href="/blogs">Blogs</a></button>
     </div>
 
     <div className="headProfile">
@@ -639,7 +640,7 @@ useEffect(()=>{
 
   {/* Progress Bar */}
   <div id='removeMobile' className="anchors-wrap">
-    <ul id='removeMobile' class="anchors">
+    <ul id='removeMobile' className="anchors">
       <li><a id="hitcontainer1" href="#homepage" ></a></li>
       <li><a id="hitcontainer2" href="#biopage" ></a></li>
       <li><a id="hitcontainer3" href="#skillspage" ></a></li>

@@ -13,7 +13,7 @@
   
   /* font-family: 'DM Serif Display', serif; */
   
-  h1,h2,h3,h4,h5,h6,p,span,.head,.tooltip,#subhead{
+  h1,h2,h3,h4,h5,h6,p,span,.head,.tooltip{
     cursor: default;
   }
   .removeDesktop{
@@ -99,13 +99,6 @@
     width: 190px;
     border-radius: 100%;
     box-shadow: 0 0 15px black;
-  }
-  #subhead{
-    font-family: 'Alegreya Sans SC', sans-serif;
-    font-size: 20px;
-    -webkit-text-stroke: white .01rem;
-    color: #B7B7B7;
-    letter-spacing: 1px;
   }
   .hr{
     position: absolute;

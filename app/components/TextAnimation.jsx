@@ -1,6 +1,7 @@
 "use client"
 import React, { useState, useEffect } from "react";
-import '../App.css'
+// import '../App.css'
+import styles from './TextAnimation.module.scss'
 
 const words = ['Web Developer', 'Web Designer', 'Tech Enthusiast'];
 
@@ -52,7 +53,7 @@ function TextAnimation() {
   }, []); // Run once when the component mounts
 
   return (
-      <div id="subhead"> A {part}</div>
+      <div id={styles.subhead}> A {part}</div>
   );
 }
 
@@ -107,5 +108,5 @@ function TextAnimation2() {
     wordFlick();
   }, []); // Run once when the component mounts
 
-  return <div id="subhead">{part}</div>;
+  return <div id={styles.subhead}>{part}</div>;
 }
