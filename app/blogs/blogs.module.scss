@@ -84,18 +84,20 @@ $darkblue: rgb(0,0,150);
     .arrowimg{
         width: 15px;
     }
-    button{
+    a{
         @include flexCenter;
         background-color: transparent;
         gap: .25rem;
+        cursor: default;
         padding: 0;
         outline: none;
         border:none;
         border-radius: 100%;
         padding: .5rem;
-        &:active{
+        @include transition;
+        &:hover{
             @include transition;
-            outline: 1px solid grey;
+            transform: translateX(-5px);
         }
     }
 }
@@ -103,19 +105,48 @@ $darkblue: rgb(0,0,150);
     max-width: 60%;
     margin-top: 1.75rem;
 }
-
+.shadow{
+    position: relative;
+    bottom: 0;
+    height: 1px;
+    width: 100vw;
+    box-shadow: 0px 10px 30px 0px #181818;
+}
 
 /* Large smartphones and small tablets (iPad mini, Nexus 7, etc.) */
 @media only screen and (max-width : 768px){
     .links, .blogsContainer{
         max-width: 70%;
     }
+    .links a{
+        &:active{
+            border-bottom: none;
+        }
+    }
 }
 
 
 /* Small smartphones (iPhone 4, Galaxy S2, etc.) */
 @media only screen and (max-width : 475px){
+    .nav{
+        border-bottom: 1px solid #2F2F2F;
+        padding-bottom: 0.75rem;
+        padding-top: 0.95rem;
+    }
+    .links{
+        border-bottom: none;
+    }
     .links a{
         font-size: 14px;
+        padding: 0.15rem 0.25rem;
+    }
+    .pfpandback{
+        margin-left: 15px;
+    }
+    #chand{
+        margin-right: 30px;
+    }
+    .blogsContainer{
+        max-width: 90%;
     }
 }
