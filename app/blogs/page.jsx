@@ -1,9 +1,8 @@
 "use client"
 import styles from "./blogs.module.scss"
-import "../globals.css"
-import blog from ""
+import Blog from "../components/blog"
 
-const blog = () => {
+const blogs = () => {
     return <>
     <div className={styles.container}>
         {/* navbar */}
@@ -24,8 +23,8 @@ const blog = () => {
         </div>
 
         {/* blogs */}
-        <div className={styles.blog}>
-            
+        <div className={styles.blogsContainer}>
+            <Blog/>
         </div>
 
 
@@ -33,4 +32,4 @@ const blog = () => {
     </>
 }
 
-export default blog;
+export default blogs;

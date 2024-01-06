@@ -15,6 +15,7 @@
 body{
   background: #181818;
   margin: 0;
+  color: white;
 }
 html{
   scroll-snap-type: y proximity;
