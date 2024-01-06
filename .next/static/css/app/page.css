@@ -16,7 +16,7 @@
   
   /* font-family: 'DM Serif Display', serif; */
   
-  h1,h2,h3,h4,h5,h6,p,span,.head,.tooltip,#subhead{
+  h1,h2,h3,h4,h5,h6,p,span,.head,.tooltip{
     cursor: default;
   }
   .removeDesktop{
@@ -80,7 +80,7 @@
   }
   #imaryan{
     color: transparent !important;
-    /* background-image: url("./assets/bgheadingsmall.png"); */
+    background-image: url(/_next/static/media/bgheadingsmall.bd37b0ca.png);
     background-size: cover;
     background-repeat: no-repeat;
     -webkit-background-clip: text;
@@ -88,10 +88,6 @@
     font-size: 75px;
     line-height: 1.1;
     -webkit-text-stroke: .03rem transparent;
-  }
-  #imaryan::-moz-selection{
-    background-color: rgba(0, 0, 0, 0.5);
-    color: inherit;
   }
   #imaryan::selection{
     background-color: rgba(0, 0, 0, 0.5);
@@ -108,13 +104,6 @@
     width: 190px;
     border-radius: 100%;
     box-shadow: 0 0 15px black;
-  }
-  #subhead{
-    font-family: 'Alegreya Sans SC', sans-serif;
-    font-size: 20px;
-    -webkit-text-stroke: white .01rem;
-    color: #B7B7B7;
-    letter-spacing: 1px;
   }
   .hr{
     position: absolute;
@@ -621,10 +610,15 @@
   
   
   
-  /* Media Queries */
+/*..................................Media Queries................................*/
    
+
+
   /* Small smartphones (iPhone 4, Galaxy S2, etc.) */
   @media only screen and (max-width : 475px){
+    body{
+      display: block;
+    }
     .nav{
       height: 60px;
       position: static;
@@ -736,8 +730,6 @@
       padding-bottom: 4.5rem;
     }
   
-  
-  
      
     /* bottom navigator */
     #navigator{
@@ -745,6 +737,7 @@
       margin: auto;
       height: 55px;
       background-color: rgba(255,255,255,12.5%);
+      position: -webkit-sticky;
       position: sticky;
       bottom: 20px;
       outline: 0.001rem solid rgba(255,255,255,75%);
@@ -830,6 +823,17 @@
   
       
   }
+/*!************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[11].oneOf[9].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[11].oneOf[9].use[3]!./node_modules/next/dist/build/webpack/loaders/resolve-url-loader/index.js??ruleSet[1].rules[11].oneOf[9].use[4]!./node_modules/next/dist/compiled/sass-loader/cjs.js??ruleSet[1].rules[11].oneOf[9].use[5]!./app/components/TextAnimation.module.scss ***!
+  \************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+#TextAnimation_subhead__YVQ14 {
+  cursor: default;
+  font-family: "Alegreya Sans SC", sans-serif;
+  font-size: 20px;
+  -webkit-text-stroke: white 0.01rem;
+  color: #B7B7B7;
+  letter-spacing: 1px;
+}
 /*!*****************************************************************************************************************************************************************************************************************************************************************************************!*\
   !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[11].oneOf[12].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[11].oneOf[12].use[3]!./node_modules/slick-carousel/slick/slick.css ***!
   \*****************************************************************************************************************************************************************************************************************************************************************************************/
