@@ -82,6 +82,7 @@ const blog = () => {
                     <p className={styles.date}>{input.date}</p>
                 </div>
             </div>
+            <hr className={styles.hr}/>
         </React.Fragment>
     }) : <h1 id={styles.comingSoon}>Blogs are coming soon...</h1> }
     </> 

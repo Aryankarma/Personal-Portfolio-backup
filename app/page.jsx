@@ -5,7 +5,8 @@ import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import React, {useState, useEffect} from 'react'
-
+import Link from "next/link"
+import Head from 'next/head'
 
 function App() {
 
@@ -218,7 +219,12 @@ useEffect(()=>{
 
 }, [])
 
+
   return <>
+
+  <head>
+    <link rel="icon" href="/img/pfp.jpg" />
+  </head>
 
 <div id='fixpadding' className="pagecontainer">
 
@@ -226,7 +232,9 @@ useEffect(()=>{
   <div id='homepage' className="page">
     <div className="nav">
       <i style={{visibility:"hidden"}} className="fa-solid fa-moon"></i>
-      <button><a href="/blogs">Blogs</a></button>
+      <button>
+        <Link href={'./blogs'}>Blogs</Link>
+      </button>
     </div>
 
     <div className="headProfile">

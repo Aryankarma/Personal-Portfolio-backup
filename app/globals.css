@@ -1,7 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Alegreya+Sans+SC:wght@100&family=Arizonia&family=DM+Serif+Display&family=Inter&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
 #root{
   height: 100vh;
   width: 100vw;
-  /* overflow-x: hidden; */
 }
 ::selection{
   background-color: black;

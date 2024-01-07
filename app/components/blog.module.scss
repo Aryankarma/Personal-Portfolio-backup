@@ -7,7 +7,6 @@
     justify-content: space-between;
     color: #F1F5F9;
     letter-spacing: 0.44px;
-    margin-bottom: 60px;
 
     .headingsContainer{
         width: 80%;
@@ -37,6 +36,14 @@
     }
 }
  
+.hr{
+    margin-bottom: 50px;
+    margin-top: 0;
+    border: none;
+    border-bottom: 1px solid #2f2f2f;
+    box-shadow: 0px 3px 5px 0px rgb(0 0 0 / 25%);
+}
+
 #comingSoon{
     color: #EEE;
     text-align: center;
@@ -49,8 +56,9 @@
 
 /* Large smartphones and small tablets (iPad mini, Nexus 7, etc.) */
 @media only screen and (max-width : 768px){
-    #blogBox{
+    .hr{
         margin-bottom: 30px;
+        width: 300px
     }
     .mainheading{
         font-size: 20px !important;
