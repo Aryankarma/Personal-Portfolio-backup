@@ -237,7 +237,7 @@ useEffect(()=>{
     <div className="headProfile">
       <div id='headContainer'>
         <div className="maskContainer">
-          <span id='imaryan' >I'm Aryan Karma</span>
+          <span id='imaryan' >I&apos;m Aryan Karma</span>
         </div>
         <TextAnimation /> {/* rendering component */}
       </div>

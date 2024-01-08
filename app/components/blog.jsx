@@ -63,10 +63,10 @@ const blogData = [{
     date:"Jan 26 2023"
 }]
 
-const blog = () => {
+const Blog = () => {
     
     // remove this useState and ternary operators when database connected
-    const [dataFetch, setDataFetch] = useState(true)
+    const [dataFetch, setDataFetch] = useState(true);
 
     return <>
    
@@ -91,4 +91,4 @@ const blog = () => {
 
 }
 
-export default blog;
+export default Blog;
