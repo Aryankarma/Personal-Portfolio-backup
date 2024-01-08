@@ -19,7 +19,7 @@ const blogs = () => {
                 <a>Technical</a>
                 <a>this&that</a>
             </div>
-            <i id={styles.chand} className="fa-solid fa-moon"></i>
+            <img id={styles.chand} src="/svg/moon.svg" alt="" />
         </div>
 
         {/* blogs */}

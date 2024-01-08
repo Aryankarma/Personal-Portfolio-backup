@@ -222,17 +222,14 @@ useEffect(()=>{
 
   return <>
 
-  <head>
-    <link rel="icon" href="/img/pfp.jpg" />
-  </head>
-
 <div id='fixpadding' className="pagecontainer">
 
   {/* Home page */}
   <div id='homepage' className="page">
     <div className="nav">
-      <i style={{visibility:"hidden"}} className="fa-solid fa-moon"></i>
-      <button>
+      <img id="chand" src="/svg/moon.svg" alt="" />
+      {/* <i className="fa-solid fa-moon"></i> */}
+      <button style={{display:"none"}}>
         <Link href={'./blogs'}>Blogs</Link>
       </button>
     </div>

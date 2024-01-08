@@ -49,13 +49,14 @@
     display: flex;
     align-items: center;
   }
-  .nav i{
+  #chand{
     margin-left: auto;
-    padding: 2rem;
-    transform: scale(1.5);
-    rotate: -15deg;
-    cursor: pointer;
-    filter: drop-shadow(0px 0px 5px #ddd);
+    padding: 1.5rem;
+    transition: 300ms ease-in-out;
+  }
+  #chand:hover{
+    transition: 300ms ease-in-out;
+    filter: drop-shadow(0px 0px 10px #ddd);
   }
   .headProfile{
     width: 100%;

@@ -63,14 +63,10 @@ $darkblue: rgb(0,0,150);
 #chand{
     @include transition;
     margin-right: 30px;
-    transform: scale(1.5);
-    rotate: -15deg;
     cursor: pointer;
-    color: #2E8BB1;
-    padding: 0 24px;
+    padding: 0 19px;
     &:hover{
-        // filter: drop-shadow(0px 0px 10px rgba(46, 139, 177, 0.50));
-        filter: drop-shadow(0px 0px 5px rgba(46, 139, 177, 0.50));
+        filter: drop-shadow(0px 0px 10px #ddd);
     }
 }
 .pfpandback{
