@@ -13,7 +13,12 @@
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
-  
+
+  /* temporary */
+  .tooltip, #chand{
+    display: none !important;
+  }
+
   /* font-family: 'DM Serif Display', serif; */
   
   h1,h2,h3,h4,h5,h6,p,span,.head,.tooltip{

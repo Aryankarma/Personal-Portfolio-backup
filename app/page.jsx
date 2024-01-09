@@ -372,9 +372,10 @@ useEffect(()=>{
             </div>
             <div className="projectFeatures">
               <ol style={{ paddingLeft: "7%" }}>
-                <li>feature xyz</li>
-                <li>feature xyz</li>
-                <li>feature xyz</li>
+                <li>Tech: React & Next</li>
+                <li>Elegant UI/UX</li>
+                <li>load time: 950ms </li>
+                <li>refresh time: 300ms</li>
               </ol>
             </div>
             <div className="checkoutbtn">
