@@ -371,12 +371,12 @@ useEffect(()=>{
               <h5 style={{ margin: "0", marginLeft: "-2%" }}>Weather App</h5>
             </div>
             <div className="projectFeatures">
-              <ol style={{ paddingLeft: "7%" }}>
+              <ul style={{ paddingLeft: "7%", listStyle: "disc"}}>
                 <li>Tech: React & Next</li>
                 <li>Elegant UI/UX</li>
                 <li>load time: 950ms </li>
                 <li>refresh time: 300ms</li>
-              </ol>
+              </ul>
             </div>
             <div className="checkoutbtn">
               <a href="https://weather-app-aryankarma.vercel.app/" target="_blank">
@@ -408,11 +408,10 @@ useEffect(()=>{
               <h5 style={{ margin: "0", marginLeft: "-2%" }}>BookSwap</h5>
             </div>
             <div className="projectFeatures">
-              <ol style={{ paddingLeft: "7%" }}>
-                <li>feature xyz</li>
-                <li>feature xyz</li>
-                <li>feature xyz</li>
-              </ol>
+              <ul style={{ paddingLeft: "7%", listStyle: "disc" }}>
+                <li>HTML, CSS, and JavaScript</li>
+                <li>Responsive design</li>
+              </ul>
             </div>
             <div className="checkoutbtn">
               <a href="" target="_blank">
@@ -422,7 +421,7 @@ useEffect(()=>{
                   </p>
                 </button>
               </a>
-              <a href="" target="_blank">
+              <a href="https://github.com/aryankarma/bookswap" target="_blank">
                 <button className='github' href="">
                     <img className='githubimg' style={{height:"15px"}} src="/svg/github.svg" alt="" />
                 </button>
@@ -444,21 +443,20 @@ useEffect(()=>{
               <h5 style={{ margin: "0", marginLeft: "-2%" }}>Your-wellness</h5>
             </div>
             <div className="projectFeatures">
-              <ol style={{ paddingLeft: "7%" }}>
-                <li>feature xyz</li>
-                <li>feature xyz</li>
-                <li>feature xyz</li>
-              </ol>
+              <ul style={{ paddingLeft: "7%", listStyle: "disc" }}>
+                <li>HTML, CSS, JavaScript, jQuery</li>
+                <li>Responsive layout</li>
+              </ul>
             </div>
             <div className="checkoutbtn">
-              <a href="" target="_blank">
+              <a href="https://aryankarma.github.io/Your-wellness/" target="_blank">
                 <button href="">
                   <p> Checkout
                     <img className='arrowimg' style={{scale: "2.1", marginLeft: ".3rem"}} src="/svg/Arrow1.svg" alt="" />
                   </p>
                 </button>
               </a>
-              <a href="" target="_blank">
+              <a href="https://github.com/aryankarma/Your-wellness" target="_blank">
                 <button className='github' href="">
                     <img className='githubimg' style={{height:"15px"}} src="/svg/github.svg" alt="" />
                 </button>
@@ -486,21 +484,22 @@ useEffect(()=>{
               <h5 style={{ margin: "0", marginLeft: "-5%" }}>Weather App</h5>
             </div>
             <div className="projectFeatures">
-              <ol style={{ paddingLeft: "10%" }}>
-                <li>feature xyz</li>
-                <li>feature xyz</li>
-                <li>feature xyz</li>
-              </ol>
+              <ul style={{ paddingLeft: "10%", listStyle: "disc" }}>
+                <li>Tech: React & Next</li>
+                <li>Elegant UI/UX</li>
+                <li>load time: 950ms </li>
+                <li>refresh time: 300ms</li>
+              </ul>
             </div>
             <div className="checkoutbtn">
-              <a href="" target="_blank">
+              <a href="https://weather-app-aryankarma.vercel.app/" target="_blank">
                 <button href="">
                   <p> Checkout
                     <img className='arrowimg' style={{ scale: "2", marginLeft: ".3rem" }} src="/svg/Arrow1.svg" alt="" />
                   </p>
                 </button>
               </a>
-              <a href="" target="_blank">
+              <a href="https://github.com/aryankarma/weatherapp" target="_blank">
                 <button className='github' href="">
                     <img className='githubimg' style={{height:"10px"}} src="/svg/github.svg" alt="" />
                 </button>
@@ -522,11 +521,10 @@ useEffect(()=>{
               <h5 style={{ margin: "0", marginLeft: "-5%" }}>BookSwap</h5>
             </div>
             <div className="projectFeatures">
-              <ol style={{ paddingLeft: "10%" }}>
-                <li>feature xyz</li>
-                <li>feature xyz</li>
-                <li>feature xyz</li>
-              </ol>
+              <ul style={{ paddingLeft: "10%", listStyle: "disc" }}>
+                <li>HTML, CSS, and JavaScript</li>
+                <li>Responsive design</li>
+              </ul>
             </div>
             <div className="checkoutbtn">
               <a href="" target="_blank">
@@ -536,7 +534,7 @@ useEffect(()=>{
                   </p>
                 </button>
               </a>
-              <a href="" target="_blank">
+              <a href="https://github.com/aryankarma/bookswap" target="_blank">
                 <button className='github' href="">
                     <img className='githubimg' style={{height:"10px"}} src="/svg/github.svg" alt="" />
                 </button>
@@ -558,21 +556,20 @@ useEffect(()=>{
               <h5 style={{ margin: "0", marginLeft: "-5%" }}>Your-wellness</h5>
             </div>
             <div className="projectFeatures">
-              <ol style={{ paddingLeft: "10%" }}>
-                <li>feature xyz</li>
-                <li>feature xyz</li>
-                <li>feature xyz</li>
-              </ol>
+              <ul style={{ paddingLeft: "10%" }}>
+                <li>HTML, CSS, JavaScript, jQuery</li>
+                <li>Responsive layout</li>
+              </ul>
             </div>
             <div className="checkoutbtn">
-              <a href="" target="_blank">
+              <a href="https://aryankarma.github.io/Your-wellness/" target="_blank">
                 <button href="">
                   <p> Checkout
                     <img className='arrowimg' style={{ scale: "2", marginLeft: ".3rem" }} src="/svg/Arrow1.svg" alt="" />
                   </p>
                 </button>
               </a>
-              <a href="" target="_blank">
+              <a href="https://github.com/aryankarma/Your-wellness" target="_blank">
                 <button className='github' href="">
                     <img className='githubimg' style={{height:"10px"}} src="/svg/github.svg" alt="" />
                 </button>

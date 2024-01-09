@@ -407,6 +407,8 @@
     font-size: 12px;
     font-weight: 300;
     line-height: 15px;
+    line-height: 150%;
+    width: 93%;
   }
   .checkoutbtn{
     margin: 1rem 0 0.75rem 0;
